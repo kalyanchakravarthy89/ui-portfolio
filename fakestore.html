@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function LoadClick(){
+            var http = new XMLHttpRequest();
+            http.open("get", "http://fakestoreapi.com/products", true);
+            http.send();
+
+            http.onreadystatechange = function(){
+                if(http.readyState==4){
+                    var products = JSON.parse(http.responseText);
+                    products.map(function(product){
+                        var img = document.createElement("img");
+                        img.src= product.image;
+                        img.width = "100";
+                        img.height = "100";
+
+                        document.getElementById("container").appendChild(img);
+                    })
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="LoadClick()">Load Products</button>
+    <div id="container" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+
+    </div>
+</body>
+</html>

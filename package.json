@@ -1,0 +1,20 @@
+{
+  "name": "ui-portfolio",
+  "version": "1.0.0",
+  "description": "Sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalyanchakravarthy89/ui-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalyanchakravarthy89/ui-portfolio/issues"
+  },
+  "homepage": "https://github.com/kalyanchakravarthy89/ui-portfolio#readme"
+}
